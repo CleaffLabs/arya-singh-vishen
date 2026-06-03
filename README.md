@@ -30,10 +30,6 @@ This repository contains my daily learning progress, notes, and practice work co
 
 * [x] Day 1 - Introduction to Automation
 * [x] Day 2 - APIs and Webhooks
-* [ ] Day 3
-* [ ] Day 4
-* [ ] Day 5
-* [ ] Week 2
 
 ## Notes
 
