@@ -37,7 +37,7 @@ Nodes are the building blocks of a workflow. Each node performs a specific task.
 
 Actions are tasks performed within the workflow after it is triggered.
 
-Examples:
+### Examples:
 
 * Send an email
 * Update a spreadsheet
