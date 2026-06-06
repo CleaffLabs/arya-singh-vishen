@@ -28,8 +28,16 @@ This repository contains my daily learning progress, notes, and practice work co
 
 ## Progress
 
-* [x] Day 1 - Introduction to Automation
-* [x] Day 2 - APIs and Webhooks
+## Progress
+
+- [x] Day 1 - Introduction to Automation
+- [x] Day 2 - APIs and Webhooks
+- [x] Day 3 - Workflow Structure and Nodes
+- [x] Day 4 - How n8n Handles Data
+- [x] Day 5 - Core workflow concepts
+- [ ] Day 6
+
+Current Status: 5/11 videos comepleted
 
 ## Notes
 
