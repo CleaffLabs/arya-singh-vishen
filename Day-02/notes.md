@@ -105,3 +105,7 @@ APIs and webhooks enable:
 * Requests and responses are the core components of API interactions.
 * Webhooks provide real-time event-driven communication.
 * APIs and webhooks are fundamental building blocks of automation workflows.
+
+## Status
+
+Completed Day 02 training video.
