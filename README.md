@@ -28,8 +28,6 @@ This repository contains my daily learning progress, notes, and practice work co
 
 ## Progress
 
-## Progress
-
 - [x] Day 1 - Introduction to Automation
 - [x] Day 2 - APIs and Webhooks
 - [x] Day 3 - Workflow Structure and Nodes
