@@ -67,3 +67,7 @@ n8n is a workflow automation platform that allows users to connect applications,
 * Workflow automation improves operational efficiency.
 * n8n enables automation through connected workflows.
 * Understanding automation fundamentals is essential before building workflows.
+
+## Status
+
+Completed Day 03 training video.
