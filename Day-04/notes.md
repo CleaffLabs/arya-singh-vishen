@@ -45,4 +45,4 @@ Expressions allow data from previous nodes to be accessed and reused.
 
 ## Status
 
-Completed Day 03 training video.
+Completed Day 04 training video.
