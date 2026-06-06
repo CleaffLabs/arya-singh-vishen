@@ -35,7 +35,7 @@ This repository contains my daily learning progress, notes, and practice work co
 - [x] Day 5 - Core workflow concepts
 - [ ] Day 6
 
-Current Status: 5/11 videos comepleted
+Current Status: 5/11 training videos comepleted
 
 ## Notes
 
