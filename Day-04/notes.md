@@ -43,6 +43,6 @@ Expressions allow data from previous nodes to be accessed and reused.
 * Workflows process data item by item.
 * Expressions help access data from previous workflow steps.
 
-##Status
+## Status
 
-Completed Day 04 training video.
+Completed Day 03 training video.
