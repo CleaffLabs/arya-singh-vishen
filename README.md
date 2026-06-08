@@ -32,10 +32,8 @@ This repository contains my daily learning progress, notes, and practice work co
 - [x] Day 2 - APIs and Webhooks
 - [x] Day 3 - Workflow Structure and Nodes
 - [x] Day 4 - How n8n Handles Data
-- [x] Day 5 - Core workflow concepts
-- [ ] Day 6
-
-Current Status: 5/11 training videos completed
+- [x] Day 5 - Core Workflow Concepts and Useful Nodes
+- [x] Day 6 - Error Handling and Debugging
 
 ## Notes
 
