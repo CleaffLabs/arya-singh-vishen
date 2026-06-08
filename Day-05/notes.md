@@ -1,63 +1,36 @@
-# Day 5 - Core Workflow Concepts
+# Day 5 - Core Workflow Concepts and Useful Nodes
 
 ## Overview
 
-Today's session introduced the core concepts behind workflow automation and how workflows are structured within n8n.
+Learned the basic concepts behind workflows and explored commonly used nodes in n8n.
 
 ## Topics Covered
 
 * Workflows
-* Nodes
 * Triggers
+* Nodes
 * Actions
 * Data Flow
-* Workflow Logic
+* Useful n8n Nodes
 
-## Key Concepts
+## Useful Nodes
 
-### Workflow
-
-A workflow is a series of connected steps that automate a process.
-
-### Trigger
-
-A trigger is the event that starts a workflow.
-
-Examples:
-
-* Manual execution
-* Schedule trigger
-* Form submission
-
-### Nodes
-
-Nodes are the building blocks of a workflow. Each node performs a specific task.
-
-### Actions
-
-Actions are tasks performed within the workflow after it is triggered.
-
-### Examples:
-
-* Send an email
-* Update a spreadsheet
-* Create a database record
-
-### Data Flow
-
-Data moves between connected nodes and is processed throughout the workflow.
-
-### Workflow Logic
-
-Logic helps workflows make decisions based on conditions and rules.
+* **Manual Trigger** – Starts a workflow manually.
+* **Schedule Trigger** – Runs workflows automatically at set times.
+* **Webhook** – Receives data from external applications.
+* **HTTP Request** – Connects with APIs and external services.
+* **Set** – Creates or modifies data.
+* **IF** – Adds conditional logic.
+* **Merge** – Combines data from multiple branches.
+* **Google Sheets** – Reads and writes spreadsheet data.
 
 ## Key Learnings
 
-* Every workflow starts with a trigger.
-* Nodes are the building blocks of workflows.
+* Workflows automate a sequence of tasks.
+* Triggers start workflows.
+* Nodes are the building blocks of automation.
 * Data flows between connected nodes.
-* Actions perform the required automation tasks.
-* Workflow logic enables decision-making and automation.
+* Different nodes serve different purposes such as triggering, processing, and integrations.
 
 ## Status
 
