@@ -34,6 +34,7 @@ This repository contains my daily learning progress, notes, and practice work co
 - [x] Day 4 - How n8n Handles Data
 - [x] Day 5 - Core Workflow Concepts and Useful Nodes
 - [x] Day 6 - Error Handling and Debugging
+- [x] Day 7 - Collaboration
 
 ## Notes
 
