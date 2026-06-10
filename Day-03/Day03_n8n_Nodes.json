@@ -1,0 +1,77 @@
+{
+  "name": "Day03_n8n_Nodes",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "48edb1fc-f2d6-401d-9e1b-7d9fb3600281",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7c93f22c-48d0-4a4b-a6c4-8929ab8c07d6",
+              "name": "topic",
+              "value": "n8n Nodes",
+              "type": "string"
+            },
+            {
+              "id": "d9134874-8e16-4e2f-a036-7e8063bccf4f",
+              "name": "day",
+              "value": "3",
+              "type": "string"
+            },
+            {
+              "id": "ca0716a2-a63f-4df0-9917-7a5240427fef",
+              "name": "status",
+              "value": "completed",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "f7f86792-515a-4af4-a4a3-d099a7a0babb",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "2ecc8201-b76a-4cf4-ae53-af31a030e0b2",
+  "meta": {
+    "instanceId": "962b2ca7dd39f7473e3b815e0db1ef7af626f47cc77ccf9f2a685ec647fdb263"
+  },
+  "nodeGroups": [],
+  "id": "x92OyfgpfrnmkEHI",
+  "tags": []
+}
