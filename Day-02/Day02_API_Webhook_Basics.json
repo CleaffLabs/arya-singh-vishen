@@ -1,0 +1,62 @@
+{
+  "name": "Day02_API_Webhook_Basics",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "day2-api-webhook",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4401fd7f-b253-43b8-8cc6-84d11f8112fb",
+      "name": "Webhook",
+      "webhookId": "702cb97f-f848-47c6-bf14-6a17486cf57b"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"message\": \"Day 2 Webhook Working\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        208,
+        0
+      ],
+      "id": "3a6f040c-0b18-4414-a637-0ea9f3516c35",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "8b771609-a7d4-473f-ba7a-1d528ffbb2b7",
+  "meta": {
+    "instanceId": "962b2ca7dd39f7473e3b815e0db1ef7af626f47cc77ccf9f2a685ec647fdb263"
+  },
+  "nodeGroups": [],
+  "id": "B2778SjKOWXcuN22",
+  "tags": []
+}
