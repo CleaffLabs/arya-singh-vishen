@@ -36,7 +36,7 @@ This repository contains my daily learning progress, notes, and practice work co
 - [x] Day 6 - Error Handling and Debugging
 - [x] Day 7 - Collaboration
 
-## Workflow Implementation (JSON)
+## Workflow JSON Implementation
 - Added Day 1 Introduction to Automation workflow JSON
 - Added Day 2 API and Webhook workflow JSON
 - Added Day 3 n8n Nodes workflow JSON
