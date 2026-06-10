@@ -26,7 +26,7 @@ This repository contains my daily learning progress, notes, and practice work co
 * Explore AI-powered automation use cases
 * Gain practical experience with integrations
 
-## Progress
+## Concept Videos Progress
 
 - [x] Day 1 - Introduction to Automation
 - [x] Day 2 - APIs and Webhooks
@@ -35,6 +35,14 @@ This repository contains my daily learning progress, notes, and practice work co
 - [x] Day 5 - Core Workflow Concepts and Useful Nodes
 - [x] Day 6 - Error Handling and Debugging
 - [x] Day 7 - Collaboration
+
+## Workflow Implementation (JSON)
+Added Day 1 Introduction to Automation workflow JSON
+Added Day 2 API and Webhook workflow JSON
+Added Day 3 n8n Nodes workflow JSON
+Added Day 4 Data Flow workflow JSON
+Added Day 5 Core Workflow Concepts workflow JSON
+Added Day 6 Error Handling and Debugging workflow JSON
 
 ## Notes
 
