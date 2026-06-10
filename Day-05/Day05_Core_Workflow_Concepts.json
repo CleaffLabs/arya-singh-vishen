@@ -1,0 +1,151 @@
+{
+  "name": "Day05_Core_Workflow_Concepts",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "5b2be263-0f6b-4b38-8077-82059d5932d5",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "43678730-c298-4fca-8caf-3c7857d03571",
+              "leftValue": 5,
+              "rightValue": 3,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        208,
+        0
+      ],
+      "id": "6a8bf8a3-00b7-4452-a2b4-1d36366a17a3",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "db19f3d5-b03e-426f-8675-68a915e191e2",
+              "name": "Result",
+              "value": "Work successful",
+              "type": "string"
+            },
+            {
+              "id": "8366c629-0385-473f-a7b6-65b8cddaf328",
+              "name": "Branch",
+              "value": true,
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        416,
+        -96
+      ],
+      "id": "856d3be3-fbca-4cea-8ba2-66776e0628ff",
+      "name": "isGreater:true"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "db19f3d5-b03e-426f-8675-68a915e191e2",
+              "name": "Result",
+              "value": "Work failed",
+              "type": "string"
+            },
+            {
+              "id": "8366c629-0385-473f-a7b6-65b8cddaf328",
+              "name": "Branch",
+              "value": false,
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        432,
+        48
+      ],
+      "id": "3496f138-ac96-4d82-a9ed-83f6ceb397f4",
+      "name": "isGreater:false"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "isGreater:true",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "isGreater:false",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "c7f7ec6c-43df-4eca-a3bf-95796375beda",
+  "meta": {
+    "instanceId": "962b2ca7dd39f7473e3b815e0db1ef7af626f47cc77ccf9f2a685ec647fdb263"
+  },
+  "nodeGroups": [],
+  "id": "Crk1OowxncgkLNkn",
+  "tags": []
+}
