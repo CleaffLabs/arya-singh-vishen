@@ -44,8 +44,8 @@ This repository contains my daily learning progress, notes, and practice work co
 - Added Day 4 Data Flow workflow JSON
 - Added Day 5 Core Workflow Concepts workflow JSON
 - Added Day 6 Error Handling and Debugging workflow JSON
-- Added Day 6 Form Submission and AI Agent chatbot workflow JSON
-- 
+- Added Day 8 Form Submission and AI Agent chatbot workflow JSON
+   
 ## Notes
 
 This repository will be updated regularly throughout the training period with daily notes, assignments, and workflow implementations.
