@@ -1,0 +1,163 @@
+{
+  "name": "QA AI Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi there! 👋\nMy name is Kira. How can I assist you today?",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a225238d-5c9f-42a2-bc5c-e0c6f08c9dc3",
+      "name": "When chat message received",
+      "webhookId": "5fb378cd-2f86-4a72-a79a-4ea19093f3e7"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a helpful Q&A assistant that answers user questions using information stored in a feedback database. Use the available tools to search the database by querying the 'question' and 'tags' fields for relevant entries.\n\nWhen relevant matches are found, provide the corresponding answer. If multiple entries are relevant, combine and summarize the information into a clear response. If no relevant information is available, politely inform the user that the answer could not be found in the QA database.\n\nAlways prioritize information retrieved from the database over assumptions, and use the most relevant matches to answer the user's question."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "4d5d172e-3064-4e22-8c49-c84968945146",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        80,
+        208
+      ],
+      "id": "afbf9148-f1bb-4c22-9afe-c19d5fb17b42",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "BAbYPWjn6xyt5vXq",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        224,
+        208
+      ],
+      "id": "d39b7213-fbf6-4af4-9953-57d917ba2de3",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Use this tool to search the Feedback data table for relevant entries. Generate a search query that will be matched against the 'question' column to find the most relevant feedback records. The tool returns matching questions along with their corresponding answers. Always provide a specific and concise search term based on the user's request.",
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "value": "ZJWMqGZVYTrG0DdD",
+          "mode": "list",
+          "cachedResultName": "q&a",
+          "cachedResultUrl": "/projects/08mADQPWDBHUw9vK/datatables/ZJWMqGZVYTrG0DdD"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "Question",
+              "condition": "ilike",
+              "keyValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('conditions0_Value', `Enter the search term or question to look up in the feedback database. The search matches questions containing the provided term, so use concise keywords, phrases, or short question fragments for best results.`, 'string') }}"
+            },
+            {
+              "keyName": "Tag",
+              "condition": "ilike",
+              "keyValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('conditions1_Value', `Enter a key term related to the classified question-answer pair. Use only one search term per tool invocation to ensure accurate results.`, 'string') }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.dataTableTool",
+      "typeVersion": 1.1,
+      "position": [
+        368,
+        208
+      ],
+      "id": "8513f9da-2c4a-4e85-9208-a5e4f59d1dea",
+      "name": "fetch-qa-from-db"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "fetch-qa-from-db": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "af52657a-b48b-49e6-a991-e100cf2f55df",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "962b2ca7dd39f7473e3b815e0db1ef7af626f47cc77ccf9f2a685ec647fdb263"
+  },
+  "nodeGroups": [],
+  "id": "dlVwBbWODnaASCDe",
+  "tags": []
+}
